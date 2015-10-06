@@ -9,25 +9,16 @@ Dependencies
 
 This layer depends on:
 
-  URI: git://git.openembedded.org/bitbake
-  branch: master
-
-  URI: git://git.openembedded.org/openembedded-core
-  layers: meta
-  branch: master
-
-  URI: git://git.yoctoproject.org/xxxx
-  layers: xxxx
+  URI: git://git.yoctoproject.org/poky.git
   branch: master
 
 
 Patches
 =======
 
-Please submit any patches against the ese layer to the
-xxxx mailing list (xxxx@zzzz.org) and cc: the maintainer:
+Please submit any patches against the ese layer to:
 
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
+Maintainer: Simon Egli <simon.egli -aT- bbv.ch>
 
 
 Table of Contents
@@ -40,7 +31,8 @@ Table of Contents
 I. Adding the ese layer to your build
 =================================================
 
---- replace with specific instructions for the ese layer ---
+cd ~ && mkdir yocto && cd yocto && git clone git://git.yoctoproject.org/poky.git
+source poky/oe-init-build-env
 
 In order to use this layer, you need to make the build system aware of
 it.
@@ -61,4 +53,6 @@ other layers needed. e.g.:
 II. Misc
 ========
 
---- replace with specific information about the ese layer ---
+This is a demo layer accompanying the talk of Simon Egli at the ESE-Kongress 2015.
+It ads a recipe and patches another recipe.
+Working as of December 2015, but don't expect anything useful for production from this demo layer.
