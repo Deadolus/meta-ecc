@@ -31,7 +31,11 @@ Table of Contents
 I. Adding the ese layer to your build
 =================================================
 
-cd ~ && mkdir yocto && cd yocto && git clone git://git.yoctoproject.org/poky.git
+cd ~ && mkdir yocto && cd yocto 
+git clone git://git.yoctoproject.org/poky.git
+cd ~/yocto/poky
+git clone git@github.com:Deadolus/meta-ese.git
+cd ~/yocto
 source poky/oe-init-build-env
 
 In order to use this layer, you need to make the build system aware of
@@ -49,8 +53,23 @@ other layers needed. e.g.:
     /path/to/yocto/meta-ese \
     "
 
+This is typically in ~/yocto/build/conf/bblayers.conf
 
-II. Misc
+II. Building the ese-image
+========
+
+To build the meta-ese example image "ese-image" (assuming I: has been done):
+
+cd ~/yocto/
+source poky/oe-init-build-env
+bitbake ese-image
+
+The finished image can then be found under
+
+~/yocto/build/tmp/deploy/qemux86/
+
+
+III. Misc
 ========
 
 This is a demo layer accompanying the talk of Simon Egli at the ESE-Kongress 2015.
